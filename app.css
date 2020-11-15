@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serrif;
+  background: url("https://i.ibb.co/dBLbrRV/bg1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  min-height: 100vh;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 100px;
+  background: #262628;
+  box-sizing: border-box;
+  height: 3em;
+  width: 100vw;
+}
+header .logo {
+  color: #fff;
+  float: left;
+  font-size: 20px;
+  line-height: 50px;
+  font-weight: bold;
+}
+header nav {
+  float: right;
+}
+header nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  padding: 0 20px;
+  display: block;
+}
+header nav ul li a:hover {
+  color: #fff;
+  cursor: pointer;
+  background: #2196f3;
+}
+
+.togglebar {
+  color: #fff;
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 0 20px;
+  }
+  .togglebar {
+    display: block;
+  }
+  header nav {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #333;
+    top: 48px;
+    left: -100vw;
+    transition: 0.5s;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  nav.active {
+    left: 0;
+  }
+  a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
